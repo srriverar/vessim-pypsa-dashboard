@@ -1,0 +1,34 @@
+Vessim ↔ PyPSA dashboard
+========================
+
+This project re-implements, in Python, the numerical methods, the editable
+spreadsheet interface and the single-line diagram conventions of two browser
+tools by Adjie Brotot:
+
+  * LoadFlow Simulator  — https://tool.adjiebrotots.com/loadflow-simulator/
+  * ED-UC Simulator     — https://tool.adjiebrotots.com/ed-uc-simulator/
+
+The original source, https://github.com/adjiebrotot/tool, is distributed under
+the GNU General Public License v3.0.  No JavaScript from that repository is
+copied here: the Newton-Raphson solver, the lambda-iteration economic dispatch,
+the priority-list unit commitment, the table schemas, the SVG layout engine
+(src/vessim_pypsa_dashboard/sld.py) and every device symbol were written from
+scratch for this dashboard and are validated against PyPSA.  The tools are
+credited as the source of the pedagogical design and of the visual vocabulary:
+thick bus bars, orthogonal routes, flow arrows along each branch and the
+results printed next to every element.
+
+Third-party software used as dependencies (not vendored):
+
+  * Vessim — dos-group, ML Systems Lab (Cambridge). MIT licence.
+    https://github.com/dos-group/vessim
+  * PyPSA — GPL-3.0.  Used as a library through its public Python API.
+    https://github.com/PyPSA/PyPSA
+  * HiGHS — MIT licence, through linopy / highspy.
+  * Streamlit — Apache-2.0.   Plotly — MIT.
+
+Datasets bundled under src/vessim_pypsa_dashboard/data/ come from the Vessim
+repository (MIT) and are used unmodified.
+
+This dashboard is an independent, academic add-on.  It is not affiliated with
+or endorsed by the Vessim maintainers, PyPSA or Adjie Brotot.

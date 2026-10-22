@@ -1,0 +1,19 @@
+[theme]
+base = "dark"
+primaryColor = "#38bdf8"
+backgroundColor = "#0b1220"
+secondaryBackgroundColor = "#111c31"
+textColor = "#e2e8f0"
+
+[browser]
+gatherUsageStats = false
+
+[server]
+headless = true
+maxUploadSize = 25
+# The app is served behind a TLS-terminating reverse proxy (Streamlit Community
+# Cloud, Codespaces, any sandbox preview).  Those proxies rewrite Host/Origin,
+# so the strict same-origin checks would reject the websocket and leave a blank
+# page.  There are no cookies, secrets or logins here, so relaxing them is safe.
+enableCORS = false
+enableXsrfProtection = false
